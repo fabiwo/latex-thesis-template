@@ -1,0 +1,24 @@
+# Auxiliary files
+*.acn
+*.acr
+*.alg
+*.aux
+*.bbl
+*.blg
+*.clg
+*.cyg
+*.cyi
+*.fdb_latexmk
+*.fls
+*.ist
+*.lof
+*.log
+*.lot
+*.out
+*.slg
+*.syg
+*.syi
+*.gz
+*.toc
+
+.vscode
