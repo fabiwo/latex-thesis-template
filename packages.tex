@@ -1,7 +1,7 @@
 \usepackage[a4paper,inner=20mm,outer=20mm,top=25mm,bottom=25mm]{geometry}
 \usepackage[activate={true,nocompatibility},final,tracking=true,kerning=true,factor=1100,stretch=10,shrink=10]{microtype}
 \usepackage[german,english]{babel}
-\addto{\captionsenglish}{\renewcommand{\bibname}{References}}
+\addto{\captionsenglish}{\renewcommand{\bibname}{References}} % Change name to to references
 \usepackage[onehalfspacing]{setspace}
 \usepackage{fancyhdr}
 \usepackage{cite}
@@ -59,7 +59,6 @@
 % zusätzliche Schriftzeichen der American Mathematical Society
 \usepackage{amsfonts}
 \usepackage{amsmath}
-%! Abkürzungsverzeichnis
 \usepackage{acronym}
 \usepackage{endnotes}
 % Lorem Ipsum Text 
@@ -67,7 +66,7 @@
 \usepackage[acronym,automake,nomain]{glossaries-extra}
 \setlength{\glsdescwidth}{15cm}
 \setabbreviationstyle[acronym]{long-short}
-\newglossary[slg]{symbolslist}{syi}{syg}{List of Symbols} % create add. symbolslist
+\newglossary[slg]{symbolslist}{syi}{syg}{Symbols} % create add. symbolslist
 \newglossary[clg]{subscriptslist}{cyi}{cyg}{Subscripts} % create add. subscripts
 \glsaddkey{unit}{\glsentrytext{\glslabel}}{\glsentryunit}{\GLsentryunit}{\glsunit}{\Glsunit}{\GLSunit}
 \makeglossaries
@@ -78,17 +77,18 @@
 \input{chapters/acronyms}
 \newglossarystyle{symbunitlong}{%
   \setglossarystyle{long3col}% base this style on the list style
-  \renewenvironment{theglossary}{% Change the table type --> 3 columns
+  \renewenvironment{theglossary}{
     \begin{longtable}{lp{0.6\glsdescwidth}>{\centering\arraybackslash}p{2cm}}}%
-      {\end{longtable}}%
-  %
+      {
+      % \bottomrule
+    \end{longtable}}%
+
   \renewcommand*{\glossaryheader}{%  Change the table header
-    \bfseries Sign & \bfseries Description & \bfseries Unit \\
-    \hline
+    % \toprule
+    \bfseries Symbol & \bfseries Description & \bfseries Unit \\
+    \midrule
     \endhead}
   \renewcommand*{\glossentry}[2]{%  Change the displayed items
-    \glstarget{##1}{\glossentryname{##1}} %
-    & \glossentrydesc{##1}% Description
-    & \glsunit{##1}  \tabularnewline
+    \glstarget{##1}{\glossentryname{##1}} & \glossentrydesc{##1} & \glsunit{##1}  \\
   }
 }

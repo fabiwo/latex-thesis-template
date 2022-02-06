@@ -1,10 +1,76 @@
 \chapter{Theory}\label{sec:theory}
 
+This is a text reference \cite{Klement.2021}. And this is a number with unit in text \SI{1}{\metre}. Another number with unit \SI{20}{\celsius}. Here is a unit without a number \si{\watt\per\square\metre\per\kelvin}.
+
+
 \section{Turtle}\label{sec:turtle}
 \lipsum[2-4]
 
+\begin{equation}
+  E = m\ c^2
+  \label{eq:equation1}
+\end{equation}
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.75\textwidth]{placeholder.png}
+  \caption{Description of Figure 1}\label{fig:figure1}
+\end{figure}
+
+\begin{table}[h]
+  \centering
+  \begin{tabular}[]{l l}
+    \toprule
+    $\alpha$ / (\si{\watt\per\square\metre\per\kelvin}) & Description                      \\
+    \midrule
+    2 - 25                                              & Free convection in gases         \\
+    10 - 1,000                                          & Free convection in liquids       \\
+    25 - 250                                            & Forced convection in gases       \\
+    50 - 20,000                                         & Forced convection in liquids     \\
+    2,500 - 100,000                                     & Condensing or evaporating liquid \\
+    \bottomrule
+  \end{tabular}
+  \caption{Heat transfer coefficients\cite{VDIGesellschaftVerfahrenstechnikundChemieingenieurwesen.2013}}\label{tab:alphaValues}
+\end{table}
+
 \section{Giraffe}\label{subsec:Giraffe}
 \lipsum[2-4]
+
+\begin{longtable}[]{@{}ll@{}}
+  \toprule
+  Column 1 & Column 2 \\
+  \midrule
+  \endhead
+  abc      & def      \\
+  abc      & def      \\
+  abc      & def      \\
+  abc      & def      \\
+  abc      & def      \\
+  abc      & def      \\
+  abc      & def      \\
+  abc      & def      \\
+  abc      & def      \\
+  abc      & def      \\
+  abc      & def      \\
+  abc      & def      \\
+  abc      & def      \\
+  abc      & def      \\
+  abc      & def      \\
+  abc      & def      \\
+  abc      & def      \\
+  abc      & def      \\
+  abc      & def      \\
+  abc      & def      \\
+  abc      & def      \\
+  abc      & def      \\
+  abc      & def      \\
+  abc      & def      \\
+  abc      & def      \\
+  abc      & def      \\
+  abc      & def      \\
+  \bottomrule
+  \caption{A long table}\label{tab:table2}
+\end{longtable}
 
 \section{Lion}\label{subsec:Lion}
 \lipsum[2-4]
